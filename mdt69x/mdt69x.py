@@ -321,7 +321,7 @@ class Controller:
         return_value = self._send_command('cm=', 1)
         self._compatible = 1
         self._error_character = '*'
-        self._voltage_commands_set = ["XV", "XY", "XZ", "AV"]
+        self._voltage_commands_set = ["XV", "YV", "ZV", "AV"]
         self._voltage_commands_get = ["XR", "YR", "ZR"]
         self._voltage_max_commands_set = ["XH", "YH", "ZH", "SYSMAX="]
         self._voltage_min_commands_set = ["XL", "YL", "ZL", "SYSMIN="]

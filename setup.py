@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mdt69x",
-    version="1.0.9",
+    version="1.0.10",
     author="Claudio Arena",
     author_email="claudio.arena.12@ucl.ac.uk",
     description="Package to communicate with Thorlab MDT69X Piezo controller",
