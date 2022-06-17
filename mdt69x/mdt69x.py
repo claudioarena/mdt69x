@@ -18,23 +18,6 @@ import glob
 
 
 class Controller:
-    _ser = serial.Serial()
-    _commands = ""
-    _model = ""
-    _firmaware_version = ""
-    _voltage_range = ""
-    _serial_number = ""
-    _name = ""
-    _compatible = 0
-    _error_character = ''
-    _master_scan_enabled = 0
-    _voltage_commands_set = ["", "", "", ""]
-    _voltage_commands_get = ["", "", ""]
-    _voltage_max_commands_set = ["", "", "", ""]
-    _voltage_min_commands_set = ["", "", "", ""]
-    _voltage_max_commands_get = ["", "", "", ""]
-    _voltage_min_commands_get = ["", "", "", ""]
-
     ECHO_OFF = 0
     ECHO_ON = 1
     COMPATIBILITY_OFF = 0
@@ -49,8 +32,18 @@ class Controller:
     ROTARY_MODE_TURN_POT = 1
     ROTARY_MODE_FINE = 2
 
-
     def __init__(self, port=""):
+        self._compatible = 0
+        self._error_character = 'CMD_NOT_DEFINED>'
+        self._master_scan_enabled = 0
+        self._voltage_commands_set = ["", "", "", ""]
+        self._voltage_commands_get = ["", "", ""]
+        self._voltage_max_commands_set = ["", "", "", ""]
+        self._voltage_min_commands_set = ["", "", "", ""]
+        self._voltage_max_commands_get = ["", "", "", ""]
+        self._voltage_min_commands_get = ["", "", "", ""]
+
+        self._ser = serial.Serial()
         self._ser.baudrate = 115200
         self._ser.bytesize = serial.EIGHTBITS
         self._ser.parity = serial.PARITY_NONE
