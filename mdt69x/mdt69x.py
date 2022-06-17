@@ -191,7 +191,7 @@ class Controller:
         print(result)
         result = result.split('\r\n')
         self._model = result[0]
-        self._firmaware_version = result[1].split(': ')[1]
+        self._firmware_version = result[1].split(': ')[1]
         self._voltage_range = result[2].split(': ')[1]
         self._serial_number = result[3].split(':')[1]
         self._name = result[4].split(':')[1]
