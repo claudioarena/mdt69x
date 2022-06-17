@@ -187,7 +187,7 @@ class Controller:
         else:
             result = self._send_query('ID?')
 
-        result = (result[3:-3]).replace('\r', '\r\n')
+        result = (result[3:-2]).replace('\r', '\r\n')
         print(result)
         result = result.split('\r\n')
         self._model = result[0]
