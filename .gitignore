@@ -36,3 +36,6 @@ pip-delete-this-directory.txt
 .idea/
 
 twine)
+my_wheels/Unidecode-1.3.4-py3-none-any.whl
+pyproject.toml
+setup.cfg
